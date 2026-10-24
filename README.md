@@ -85,7 +85,7 @@ $$s_{i,j} = -s_{j,i} \quad (\forall i < j)$$
 Each participant masks their model update $x_i$:
 $$y_i = x_i + \sum_{j \in \mathcal{G}, j > i} s_{i,j} - \sum_{j \in \mathcal{G}, j < i} s_{j,i}$$
 When aggregated by the Subgroup Aggregator:
-$$\sum_{i \in \mathcal{G}} y_i = \sum_{i \in \mathcal{G}} x_i + \sum_{i \in \mathcal{G}} \sum_{j \in \mathcal{G}, j \ne i} \operatorname{sgn}(j - i) s_{\min(i,j), \max(i,j)} = \sum_{i \in \mathcal{G}} x_i$$
+\sum_{i \in \mathcal{G}} y_i = \sum_{i \in \mathcal{G}} x_i + \sum_{i \in \mathcal{G}} \sum_{j \in \mathcal{G}, j \ne i} \operatorname{sgn}(j - i) s_{\min(i,j), \max(i,j)} = \sum_{i \in \mathcal{G}} x_i
 All masks cancel out cleanly while individual vectors remain strictly obfuscated to the aggregator.
 
 ### 3.2 Median Scoring & Byzantine Slashing

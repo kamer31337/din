@@ -90,7 +90,7 @@ All masks cancel out cleanly while individual vectors remain strictly obfuscated
 
 ### 3.2 Median Scoring & Byzantine Slashing
 For model $i$, evaluators submit scores $S_i = \{s_{i,1}, s_{i,2}, \dots, s_{i,Q}\}$.
-Let $M_i = \operatorname{median}(S_i)$.
+Let M_i = \operatorname{median}(S_i).
 The validated score assigned to evaluator $q$ for assessing participant $i$ is penalized if it deviates beyond a strict boundary:
 \tilde{s}_{i,q} = \begin{cases} s_{i,q} & \text{if } |s_{i,q} - M_i| \le 0.5 \\ 0 & \text{if } |s_{i,q} - M_i| > 0.5 \end{cases}$$
 The final aggregate participant score is normalized across all honest evaluations:

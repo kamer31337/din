@@ -92,9 +92,9 @@ All masks cancel out cleanly while individual vectors remain strictly obfuscated
 For model $i$, evaluators submit scores $S_i = \{s_{i,1}, s_{i,2}, \dots, s_{i,Q}\}$.
 Let $M_i = \operatorname{median}(S_i)$.
 The validated score assigned to evaluator $q$ for assessing participant $i$ is penalized if it deviates beyond a strict boundary:
-$$\tilde{s}_{i,q} = \begin{cases} s_{i,q} & \text{if } |s_{i,q} - M_i| \le 0.5 \\ 0 & \text{if } |s_{i,q} - M_i| > 0.5 \end{cases}$$
+\tilde{s}_{i,q} = \begin{cases} s_{i,q} & \text{if } |s_{i,q} - M_i| \le 0.5 \\ 0 & \text{if } |s_{i,q} - M_i| > 0.5 \end{cases}$$
 The final aggregate participant score is normalized across all honest evaluations:
-$$\bar{S}_i = \frac{1}{|\{q : |s_{i,q} - M_i| \le 0.5\}|} \sum_{q : |s_{i,q} - M_i| \le 0.5} s_{i,q}$$
+\bar{S}_i = \frac{1}{|\{q : |s_{i,q} - M_i| \le 0.5\}|} \sum_{q : |s_{i,q} - M_i| \le 0.5} s_{i,q}
 
 ### 3.3 Harberger Taxation & Partial Common Ownership (PCO)
 Evaluator NFT license holding an asset valuation $V_e$ is taxed at rate $\tau$ over epoch $\Delta t$:
